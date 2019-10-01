@@ -1,5 +1,5 @@
 /**
- * selectize.js (v0.12.6)
+ * selectize.js (v0.12.8)
  * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -1633,6 +1633,8 @@
 	
 			// add "selected" class to selected options
 			if (!self.settings.hideSelected) {
+				// remove selected class from every options
+				self.$dropdown_content.find('.option').removeClass('selected');
 				for (i = 0, n = self.items.length; i < n; i++) {
 					self.getOption(self.items[i]).addClass('selected');
 				}
